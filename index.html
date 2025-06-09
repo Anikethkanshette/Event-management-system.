@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Events Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1 class="fade-in">Events Management System</h1>
+        <form id="eventForm" class="glass">
+            <input type="text" id="eventName" placeholder="Event Name" required>
+            <input type="date" id="eventDate" required>
+            <input type="text" id="eventLocation" placeholder="Location" required>
+            <select id="eventCategory" required>
+                <option value="" disabled selected>Category</option>
+                <option value="Meeting">Meeting</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Conference">Conference</option>
+                <option value="Holiday">Holiday</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">Add Event</button>
+        </form>
+        <div class="controls">
+            <input type="text" id="searchBox" placeholder="Search events..." />
+            <select id="sortBy">
+                <option value="date">Sort by Date</option>
+                <option value="name">Sort by Name</option>
+                <option value="location">Sort by Location</option>
+                <option value="category">Sort by Category</option>
+            </select>
+        </div>
+        <h2 class="fade-in">Upcoming Events</h2>
+        <ul id="eventList"></ul>
+    </div>
+    <!-- Modal for event details -->
+    <div id="modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
